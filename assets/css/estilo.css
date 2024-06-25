@@ -1,0 +1,419 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'VT323', monospace;
+}
+
+body {
+    background-color: black;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #111;
+    color: #fff;
+}
+
+header .logo {
+    font-size: 24px;
+    position: relative;
+}
+
+header .logo::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+header .logo:hover {
+    color: #29faf5;
+}
+
+header .logo:hover::after {
+    bottom: 0;
+    background-color: #29faf5;
+}
+
+header .caixa-links {
+    display: flex;
+    gap: 10px;
+}
+
+header .icones-redes {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+.icones-redes:hover{
+    transform: scale(1.2);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: #fff;
+    width: 100%;
+    bottom: 0;
+    background-color: #111;
+}
+
+footer p {
+    position: relative;
+}
+
+footer p::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+footer p:hover {
+    color: #29faf5;
+}
+
+footer p:hover::after {
+    bottom: 0;
+    background-color: #29faf5;
+}
+
+.caixa-maior {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.primeira-caixa-menor {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.caixa-perfil {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.perfil {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 20px 0;
+}
+
+.imagem {
+    width: 250px;
+    height: 250px;
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+.imagem:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 10px 5px #29faf5;
+    border-radius: 30px;
+}
+
+.main-titulo {
+    margin-top: 20px;
+    position: relative;
+    width: 900px;
+}
+
+.titulo {
+    font-size: 40px;
+    color: #fff;
+    position: relative;
+}
+
+.titulo::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.titulo:hover {
+    color: #29faf5;
+}
+
+.titulo:hover::after {
+    bottom: 0;
+    background-color: #29faf5;
+}
+
+.caixa-linguagens {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+.icones-linguagens {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.icones-linguagens:hover {
+    transform: scale(1.2);
+}
+
+.sobre {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.titulo-sobre {
+    font-size: 28px;
+    color: #fff;
+    position: relative;
+}
+
+.titulo-sobre::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.titulo-sobre:hover {
+    color: #29faf5;
+}
+
+.titulo-sobre:hover::after {
+    bottom: 0;
+    background-color: #29faf5;
+}
+
+.texto-sobre {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #fff;
+    text-align: left;
+    white-space: pre-wrap;
+    display: none; /* Initially hidden */
+}
+
+.letra {
+    display: inline;
+    opacity: 0;
+    transition: opacity 0.1s;
+}
+
+.caixa-projetos {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    height: 30vh;
+}
+
+.caixa-sites {
+    padding: 15px;
+    width: 20%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.caixa-sites:hover {
+    transform: scale(1.2);
+}
+
+.imagem-site {
+    width: 200px;
+    border-radius: 20px;
+    border: solid 2px #29faf5;
+    margin-top: 10px;
+}
+
+.imagem-site:hover {
+    box-shadow: 0 0 10px 5px #29faf5;
+}
+
+.titulo-projeto {
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.titulo-projeto:hover {
+    color: #29faf5;
+}
+
+.caixa-curriculo {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Curriculo {
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 12%;
+    background-color: red;
+    transition: transform 0.3s ease;
+}
+
+.Curriculo:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px 5px red;
+}
+
+.titulo-curriculo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+/* Estilos para os textos que aparecem ao passar o mouse */
+.imagem-com-texto {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px; /* Espaço para o texto aparecer abaixo */
+    width: 900px;
+}
+
+.texto-animado {
+    font-size: 20px;
+    display: none;
+    position: absolute;
+    background-color: #2f2841;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 900px;
+    z-index: 10;
+    top: 110%; /* Posiciona o texto abaixo da imagem */
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px 5px #29faf5;
+}
+
+@keyframes slide-in {
+    from { transform: translateY(100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.texto-animado.slide-in {
+    display: block;
+    animation: slide-in 2s forwards;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .caixa-projetos {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .caixa-sites {
+        width: 90%;
+        padding: 30px;
+    }
+
+    header .logo {
+        display: none;
+    }
+
+    .imagem {
+        display: none;
+    }
+
+    .caixa-links {
+        justify-content: center; /* Centraliza os ícones */
+        align-items: center;
+        width: 100%;
+    }
+
+    body {
+        padding-top: 60px; /* Espaço para o menu fixo */
+    }
+
+    .caixa-maior {
+        padding: 10px;
+        width: 90%;
+    }
+
+    .primeira-caixa-menor {
+        flex-direction: column;
+    }
+
+    .perfil {
+        width: 200px;
+        height: 200px;
+    }
+
+    .main-titulo {
+        width: 100%;
+    }
+
+    .titulo {
+        font-size: 32px;
+    }
+
+    .caixa-linguagens {
+        flex-wrap: wrap;
+    }
+
+    .icones-linguagens {
+        width: 50px;
+        height: 50px;
+    }
+
+    .titulo-sobre {
+        font-size: 24px;
+    }
+
+    .texto-sobre {
+        font-size: 16px;
+    }
+
+    .Curriculo {
+        width: 30%;
+    }
+}

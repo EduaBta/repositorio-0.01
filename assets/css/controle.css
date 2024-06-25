@@ -1,0 +1,122 @@
+/* Remover margens padrões */
+body {
+    margin: 0;
+}
+
+/* Definir box-sizing para incluir padding e border */
+body * {
+    box-sizing: border-box;
+}
+
+/* Estilização principal da área de login */
+.main-login {
+    width: 100vw;
+    height: 100vh;
+    background-color: #201b2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilização da seção direita da área de login */
+.right-login {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sair {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    width: 35vw;
+}
+
+/* Estilização do cartão de login */
+.card-login {
+    width: 60%;
+    height: 70vh; /* Define a fixed height for the card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 35px;
+    background-color: #2f2841;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+    color: #f0ffffde; /* Cor do texto dentro do card */
+    overflow: hidden; /* Hide overflow from the card itself */
+}
+
+/* Estilização do cabeçalho */
+h1 {
+    color: #29faf5;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilização da lista de usuários */
+#usuariosList {
+    margin-top: 20px;
+    width: 100%;
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: calc(100% - 60px); /* Adjust the height based on the remaining space in the card */
+}
+
+/* Estilização dos itens de usuário */
+.usuario-item {
+    background-color: #514869;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.usuario-item p {
+    color: #f0ffffde;
+    margin: 0;
+    font-size: 14px;
+}
+
+.usuario-item strong {
+    font-weight: bold;
+    color: #29faf5;
+}
+
+/* Estilizações responsivas */
+@media only screen and (max-width: 950px) {
+    .card-login {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main-login {
+        flex-direction: column;
+    }
+
+    .left-login h1 {
+        display: none;
+    }
+
+    .left-login, .right-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .image {
+        width: 50vw;
+    }
+
+    .card-login {
+        width: 90%;
+    }
+    .right-login{
+        display:flex;
+        flex-direction:column
+    }
+}
